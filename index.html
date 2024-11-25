@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArvsStore - Gaming Community</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #3b82f6;
+            --text: #f8fafc;
+            --hover: #2563eb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .navbar {
+            background: var(--secondary);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1920/600');
+            background-size: cover;
+            background-position: center;
+            padding: 6rem 5%;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #cbd5e1;
+        }
+
+        .grid-container {
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .grid-item {
+            background: var(--secondary);
+            border-radius: 1rem;
+            overflow: hidden;
+            transition: transform 0.3s;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .grid-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .item-image {
+            width: 100%;
+            height: 300px;
+            background: #2a2a3a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: var(--accent);
+        }
+
+        .item-content {
+            padding: 1.5rem;
+        }
+
+        .item-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .item-price {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            color: #10b981;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background: var(--hover);
+        }
+
+        .wa-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #25d366;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            z-index: 100;
+            font-size: 1.5rem;
+        }
+
+        .features {
+            background: var(--secondary);
+            padding: 4rem 5%;
+            margin-top: 4rem;
+        }
+
+        .feature-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .feature-item {
+            padding: 2rem;
+        }
+
+        .feature-item h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            background: var(--secondary);
+            padding: 3rem 5%;
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">ArvsStore</div>
+        <div class="nav-links">
+            
+            
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>ArvsStore Gaming</h1>
+        <p>MAU JOKI? WA MIMIN AJA</p>
+    </section>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="item-image">
+            <img src="https://i.postimg.cc/c4q0zq6K/AKUN-1.jpg" alt=""></div>
+            <div class="item-content">
+                <h3 class="item-title">AKUN BLOX FRUIT</h3>
+                <p>Spek bisa di liat</p>
+                <div class="item-price">Rp 30.000</div>
+                <a href="https://wa.me/6285133127846" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="item-image">
+            <img src="https://i.postimg.cc/Cxx8RfYp/AKUN-2.jpg" alt=""></div>
+            <div class="item-content">
+                <h3 class="item-title">AKUN BLOX FRUIT</h3>
+                <p> Spek bisa di liat</p>
+                <div class="item-price">Rp 20.000</div>
+                <a href="https://wa.me/6285133127846" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="item-image">
+            <img src="https://i.postimg.cc/SKY4SkQm/AKUN-4.jpg" alt="biasa"></div>
+            <div class="item-content">
+                <h3 class="item-title">AKUN BLOX FRUIT</h3>
+                <p>Spek bisa di liat</p>
+                <div class="item-price">Rp 5.000</div>
+                <a href="https://wa.me/6285133127846" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="item-image">
+                <img src="https://i.postimg.cc/RZnzhFWV/AKUN-5.jpg" alt="biasa">
+            </div>
+            <div class="item-content">
+                <h3 class="item-title">AKUN BLOX FRUIT</h3>
+                <p>Spek bisa diliat</p>
+                <div class="item-price">Rp 5.000</div>
+                <a href="https://wa.me/6285133127846" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="item-image">
+                <img src="https://i.postimg.cc/3wm9byw6/AKUN-6.jpg" alt="biasa">
+             </div>
+             <div class="item-content">
+                <h3 class="item-title">AKUN BLOX FRUIT</h3>
+                <p>spek bisa diliat</p>
+                <div class="item-price">Rp 7.000</div>
+                <a href="https://wa.me/6285133127846" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+
+        <div class="grid-item">
+            <div class="item-image">
+                <img src="https://i.postimg.cc/Vv6q15Yz/AKUN-7.jpg" alt="biasa">
+            </div>
+            <div class="item-content">
+                <h3 class="item-title">AKUN BLOX FRUIT</h3>
+                <p>spek bisa diliat</p>
+                <div class="item-price">Rp 5.000</div>
+                <a href="https://wa.me/6285133127846" class="btn">Beli Sekarang</a>
+            </div>
+        </div>
+
+            </div>
+
+    <section class="features">
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h3>MAU JOKI ?</h3>
+                <p> <a href="https://wa.me/6285133127846?text=Halo,%20saya%20ingin%20joki%20dong%20kak" class="btn">KLIK DISINI UNTUK MENUJU KE WA ADMIN</a></p>
+            </div>
+
+            <div class="feature-item">
+                <h3>MAU BELI BUAH ?</h3>
+                <p> <a href="https://wa.me/6285133127846?text=Halo,%20saya%20pengen%20beli%20buah%20nih%20kak" class="btn">KLIK DISINI UNTUK MENUJU KE WA ADMIN</a></p>
+            </div>
+
+            <div class="feature-item">
+                <h3>ADA AKUN YANG MAU DI TAWAR ?</h3>
+                <p> <a href="https://wa.me/6285133127846?text=Halo,%20kak%20saya%20mau%20nawar%20akunnya%20kak%20admin%20dong" class="btn">KLIK DISINI UNTUK MENUJU KE WA ADMIN</a></p>
+            </div>
+
+            <div class="feature-item">
+                <h3>INGIN MELIHAT TESTI ?</h3>
+                <p> <a href="https://wa.me/6285133127846" class="btn">KLIK DISINI UNTUK MENUJU KE WA ADMIN</a></p>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/6285133127846" class="wa-btn">📱</a>
+
+    <footer class="footer">
+        <p>© 2024 ArvsStore - Gaming Community</p>
+        <p>Premium Gaming Guides & Tutorials</p>
+    </footer>
+</body>
+</html>
